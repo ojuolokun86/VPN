@@ -4,8 +4,8 @@ const axios = require('axios');
 const cors = require('cors');
 const corsOptions = {
   origin: [
-    'http://localhost:8080',     // ✅ Dev domain
-    'https://techitoon-vpn.netlify.app'      // ✅ Live domain
+    'http://localhost:8080',
+    'https://techitoon-vpn.netlify.app'
   ],
   methods: ['GET', 'POST', 'DELETE'],
   allowedHeaders: ['Content-Type']
@@ -13,11 +13,14 @@ const corsOptions = {
 
 
 
+
+
+
 const app = express();
 app.use(cors(corsOptions));
 app.use(express.json());
 
-const VPS_API = process.env.VPS_API || 'http://89.168.115.234:4000';
+const VPS_API = 'http://89.168.115.234:4000';
 // Add this above your /create-user route
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
