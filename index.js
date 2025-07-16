@@ -4,20 +4,20 @@ const axios = require('axios');
 const cors = require('cors');
 const corsOptions = {
   origin: [
-    'http://localhost:8080',
-    'https://techitoon-vpn.netlify.app'
+    'https://techitoon-vpn.netlify.app',  // your frontend domain
+    'http://localhost:8080'                // local dev
   ],
   methods: ['GET', 'POST', 'DELETE'],
-  allowedHeaders: ['Content-Type']
+  allowedHeaders: ['Content-Type'],
+  credentials: true // if you use cookies or auth tokens
 };
 
 
 
 
 
-
 const app = express();
-app.use(cors(corsOptions));
+app.use(cors(corsOptions));add
 app.use(express.json());
 
 const VPS_API = 'http://89.168.115.234:4000';
