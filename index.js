@@ -5,7 +5,7 @@ const cors = require('cors');
 const corsOptions = {
   origin: [
     'http://localhost:8080',     // ✅ Dev domain
-    'https://vpn.myapp.com'      // ✅ Live domain
+    'https://techitoon-vpn.netlify.app'      // ✅ Live domain
   ],
   methods: ['GET', 'POST', 'DELETE'],
   allowedHeaders: ['Content-Type']
