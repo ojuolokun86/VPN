@@ -17,7 +17,7 @@ const corsOptions = {
 
 
 const app = express();
-app.use(cors(corsOptions));add
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const VPS_API = 'http://89.168.115.234:4000';
